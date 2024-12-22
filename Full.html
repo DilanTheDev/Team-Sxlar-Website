@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Sxlar</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Dark Theme Styling */
+        body {
+            font-family: Arial, sans-serif;
+            color: #f0f0f0;
+            background-color: #121212;
+            overflow-x: hidden;
+        }
+
+        /* Loading Screen */
+        #loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #333333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        #loading img {
+            width: 150px;
+            animation: pulse 1s infinite alternate;
+        }
+
+        @keyframes pulse {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.3);
+            }
+        }
+
+        /* Fade-out Animation */
+        .fade-out {
+            animation: fadeOut 1s forwards;
+        }
+
+        @keyframes fadeOut {
+            to {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #1f1f1f;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header nav a {
+            color: #f0f0f0;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        header nav a:hover {
+            color: #ff9800;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        section:nth-child(odd) {
+            background-color: #1a1a1a;
+        }
+
+        section:nth-child(even) {
+            background-color: #242424;
+        }
+
+        section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .roster-grid,
+        .sponsor-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .roster-item,
+        .sponsor-item {
+            background-color: #1f1f1f;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            max-width: 200px;
+        }
+
+        .roster-item img,
+        .sponsor-item img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #1f1f1f;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header nav a {
+                margin: 0 10px;
+                font-size: 0.9rem;
+            }
+
+            section h1 {
+                font-size: 2rem;
+            }
+
+            section p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading">
+        <img src="your-logo-url.png" alt="Team Sxlar Logo">
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div><strong>Team Sxlar</strong></div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#roster">Roster</a>
+            <a href="#sponsors">Sponsors</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Sections -->
+    <section id="home">
+        <h1>Welcome to Team Sxlar</h1>
+        <p>Rising stars in Fortnite esports. Join us on our journey to greatness!</p>
+    </section>
+
+    <section id="about">
+        <h1>About Us</h1>
+        <p>Team Sxlar is committed to dominating the competitive Fortnite scene. We aim to inspire and grow the next generation of champions.</p>
+    </section>
+
+    <section id="roster">
+        <h1>Our Roster</h1>
+        <div class="roster-grid">
+            <div class="roster-item">
+                <img src="player1.jpg" alt="Player 1">
+                <h2>Player 1</h2>
+                <p>Captain</p>
+            </div>
+            <div class="roster-item">
+                <img src="player2.jpg" alt="Player 2">
+                <h2>Player 2</h2>
+                <p>Top Player</p>
+            </div>
+            <!-- Add more players here -->
+        </div>
+    </section>
+
+    <section id="sponsors">
+        <h1>Our Sponsors</h1>
+        <p>Proudly supported by:</p>
+        <div class="sponsor-grid">
+            <div class="sponsor-item">
+                <img src="sponsor1-logo.png" alt="Sponsor 1">
+                <p>Sponsor 1</p>
+            </div>
+            <div class="sponsor-item">
+                <img src="sponsor2-logo.png" alt="Sponsor 2">
+                <p>Sponsor 2</p>
+            </div>
+            <!-- Add more sponsors here -->
+        </div>
+    </section>
+
+    <section id="contact">
+        <h1>Contact Us</h1>
+        <p>Join our community on Discord to connect with us!</p>
+        <a href="https://dsc.gg/team-sxlar" style="color: #ff9800; font-size: 1.5rem;">Join Discord</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Team Sxlar. All rights reserved.
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Wait for assets to load and enforce a 5-second minimum loading time
+        const minLoadingTime = 5000; // 5 seconds
+        const loadingStartTime = Date.now();
+
+        window.addEventListener("load", () => {
+            const loadingScreen = document.getElementById("loading");
+
+            // Calculate remaining time
+            const elapsedTime = Date.now() - loadingStartTime;
+            const remainingTime = Math.max(0, minLoadingTime - elapsedTime);
+
+            // Fade out loader after remaining time
+            setTimeout(() => {
+                loadingScreen.classList.add("fade-out");
+                setTimeout(() => {
+                    loadingScreen.style.display = "none";
+                }, 1000); // Ensure it's completely removed after fade-out
+            }, remainingTime);
+        });
+    </script>
+</body>
+</html>

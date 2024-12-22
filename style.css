@@ -66,9 +66,11 @@ section p {
 }
 
 .sponsor-item img {
-    width: 100%; /* Make sponsor logos responsive */
-    max-width: 200px;
+    width: 100%; /* Ensure it scales responsively */
+    max-width: 300px; /* Increased maximum width */
     border-radius: 10px;
+    display: block;
+    margin: 0 auto;
 }
 
 footer {
@@ -132,7 +134,7 @@ footer {
     }
 
     .sponsor-item img {
-        max-width: 150px;
+        max-width: 250px; /* Slightly smaller on tablets */
     }
 }
 
@@ -159,6 +161,6 @@ footer {
     }
 
     .sponsor-item img {
-        max-width: 120px;
+        max-width: 200px; /* Adjust for smaller screens */
     }
 }

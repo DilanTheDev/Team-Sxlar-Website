@@ -47,7 +47,8 @@ section {
     padding: 15px;
     border-radius: 10px;
     text-align: center;
-    max-width: 200px;
+    width: calc(33.333% - 20px); /* Three items per row */
+    box-sizing: border-box;
 }
 
 .sponsor-item img {
@@ -103,8 +104,7 @@ footer {
     }
 
     .roster-item {
-        max-width: 150px;
-        font-size: 14px;
+        width: calc(50% - 20px); /* Two items per row for medium screens */
     }
 
     .sponsor-item img {
@@ -127,8 +127,7 @@ footer {
     }
 
     .roster-item {
-        max-width: 120px;
-        font-size: 12px;
+        width: 100%; /* One item per row for small screens */
     }
 
     .sponsor-item img {

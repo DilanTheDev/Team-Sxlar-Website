@@ -22,6 +22,7 @@ nav {
 nav a {
     color: #f0f0f0;
     text-decoration: none;
+    font-size: 1.2rem; /* Increase font size */
     font-weight: bold;
     transition: color 0.3s;
 }
@@ -33,6 +34,15 @@ nav a:hover {
 section {
     padding: 40px 20px;
     text-align: center;
+}
+
+section h1 {
+    font-size: 2rem; /* Resizable heading */
+}
+
+section p {
+    font-size: 1rem; /* Resizable paragraph */
+    line-height: 1.5;
 }
 
 .sponsor-grid, .roster-grid {
@@ -47,12 +57,18 @@ section {
     padding: 15px;
     border-radius: 10px;
     text-align: center;
-    width: calc(33.333% - 20px); /* Three items per row */
+    flex: 1 1 30%; /* Flexible sizing */
     box-sizing: border-box;
 }
 
+.roster-item h2 {
+    font-size: 1rem;
+}
+
 .sponsor-item img {
-    width: 150px;
+    width: 100%; /* Make sponsor logos responsive */
+    max-width: 200px;
+    border-radius: 10px;
 }
 
 footer {
@@ -95,20 +111,28 @@ footer {
         padding: 15px;
     }
 
+    nav {
+        flex-direction: row;
+    }
+
     nav a {
-        font-size: 14px;
+        font-size: 1rem; /* Slightly smaller on tablets */
     }
 
     section h1 {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
+    }
+
+    section p {
+        font-size: 0.9rem;
     }
 
     .roster-item {
-        width: calc(50% - 20px); /* Two items per row for medium screens */
+        flex: 1 1 45%; /* Two items per row */
     }
 
     .sponsor-item img {
-        width: 120px;
+        max-width: 150px;
     }
 }
 
@@ -119,18 +143,22 @@ footer {
     }
 
     nav a {
-        font-size: 12px;
+        font-size: 1rem;
     }
 
-    section {
-        padding: 30px 10px;
+    section h1 {
+        font-size: 1.2rem;
+    }
+
+    section p {
+        font-size: 0.8rem;
     }
 
     .roster-item {
-        width: 100%; /* One item per row for small screens */
+        flex: 1 1 100%; /* One item per row */
     }
 
     .sponsor-item img {
-        width: 100px;
+        max-width: 120px;
     }
 }

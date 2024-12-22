@@ -12,9 +12,15 @@ header {
     text-align: center;
 }
 
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
 nav a {
     color: #f0f0f0;
-    margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
@@ -31,8 +37,21 @@ section {
 
 .sponsor-grid, .roster-grid {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+}
+
+.roster-item {
+    background-color: #1f1f1f;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 200px;
+}
+
+.sponsor-item img {
+    width: 150px;
 }
 
 footer {
@@ -66,5 +85,53 @@ footer {
     }
     to {
         transform: scale(1.3);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    section h1 {
+        font-size: 1.8rem;
+    }
+
+    .roster-item {
+        max-width: 150px;
+        font-size: 14px;
+    }
+
+    .sponsor-item img {
+        width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    section {
+        padding: 30px 10px;
+    }
+
+    .roster-item {
+        max-width: 120px;
+        font-size: 12px;
+    }
+
+    .sponsor-item img {
+        width: 100px;
     }
 }

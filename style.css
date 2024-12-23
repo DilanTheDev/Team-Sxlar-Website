@@ -21,8 +21,8 @@ header {
 
 header nav {
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    gap: 15px;
 }
 
 header nav a {
@@ -141,15 +141,9 @@ footer {
 }
 
 @media (max-width: 480px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
     header nav {
-        flex-direction: column;
-        gap: 10px;
+        flex-wrap: wrap; /* Allow wrapping for very small screens */
+        justify-content: center;
     }
 
     header nav a {

@@ -11,7 +11,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(31, 31, 31, 0.9); /* Slight transparency */
+    background: rgba(31, 31, 31, 0.95); /* Slight transparency */
     padding: 15px;
     z-index: 1000;
     display: flex;
@@ -21,13 +21,14 @@ header {
 
 header nav {
     display: flex;
-    gap: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 header nav a {
     color: #f0f0f0;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: bold;
     transition: color 0.3s;
 }
@@ -72,7 +73,7 @@ section p {
 
 .sponsor-item img {
     width: 100%;
-    max-width: 300px; /* Increased size for desktop */
+    max-width: 300px;
     border-radius: 10px;
     display: block;
     margin: 0 auto;
@@ -119,7 +120,7 @@ footer {
     }
 
     header nav a {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
     section h1 {
@@ -152,7 +153,7 @@ footer {
     }
 
     header nav a {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
     section h1 {

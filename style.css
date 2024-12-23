@@ -7,27 +7,32 @@ body {
 }
 
 header {
-    background: #1f1f1f;
-    padding: 20px;
-    text-align: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(31, 31, 31, 0.9); /* Slight transparency */
+    padding: 15px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-nav {
+header nav {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
     gap: 15px;
 }
 
-nav a {
+header nav a {
     color: #f0f0f0;
     text-decoration: none;
-    font-size: 1.2rem; /* Increase font size */
+    font-size: 1rem;
     font-weight: bold;
     transition: color 0.3s;
 }
 
-nav a:hover {
+header nav a:hover {
     color: #ff9800;
 }
 
@@ -37,11 +42,11 @@ section {
 }
 
 section h1 {
-    font-size: 2rem; /* Resizable heading */
+    font-size: 2rem;
 }
 
 section p {
-    font-size: 1rem; /* Resizable paragraph */
+    font-size: 1rem;
     line-height: 1.5;
 }
 
@@ -57,7 +62,7 @@ section p {
     padding: 15px;
     border-radius: 10px;
     text-align: center;
-    flex: 1 1 30%; /* Flexible sizing */
+    flex: 1 1 30%;
     box-sizing: border-box;
 }
 
@@ -66,8 +71,8 @@ section p {
 }
 
 .sponsor-item img {
-    width: 100%; /* Ensure it scales responsively */
-    max-width: 300px; /* Increased maximum width */
+    width: 100%;
+    max-width: 300px; /* Increased size for desktop */
     border-radius: 10px;
     display: block;
     margin: 0 auto;
@@ -110,15 +115,11 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
     header {
-        padding: 15px;
+        padding: 10px;
     }
 
-    nav {
-        flex-direction: row;
-    }
-
-    nav a {
-        font-size: 1rem; /* Slightly smaller on tablets */
+    header nav a {
+        font-size: 0.9rem;
     }
 
     section h1 {
@@ -134,18 +135,24 @@ footer {
     }
 
     .sponsor-item img {
-        max-width: 250px; /* Slightly smaller on tablets */
+        max-width: 250px;
     }
 }
 
 @media (max-width: 480px) {
-    nav {
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    header nav {
         flex-direction: column;
         gap: 10px;
     }
 
-    nav a {
-        font-size: 1rem;
+    header nav a {
+        font-size: 0.9rem;
     }
 
     section h1 {
@@ -160,7 +167,11 @@ footer {
         flex: 1 1 100%; /* One item per row */
     }
 
+    .sponsor-grid {
+        flex-direction: column; /* Sponsors stack vertically */
+    }
+
     .sponsor-item img {
-        max-width: 200px; /* Adjust for smaller screens */
+        max-width: 200px;
     }
 }
